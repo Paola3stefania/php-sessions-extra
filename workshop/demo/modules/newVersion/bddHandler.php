@@ -13,7 +13,9 @@ $_SESSION['desc']="Im the session file";
 
 var_dump($_SESSION);
 
-# var_dump(session_save_path());
+var_dump(session_save_path());
+
+$bddAbsRoute=session_save_path();
 
 # 1:{email: xxxx@zzzz.com, pass: aaaa}
 
@@ -33,24 +35,29 @@ var_dump($_SESSION);
 
 
 
-$filee=file("/Applications/XAMPP/xamppfiles/htdocs/php-sessions-workshop/workshop/bdd.php");
-
-#print_r($filee);
+$filee=file($bddAbsRoute."bdd.txt", FILE_SKIP_EMPTY_LINES);
 
 echo "<h1>HEY</h1>";
 
-print_r($filee);
+
+var_dump($filee);
 
 echo "</br>";
 
 echo "</br>";
-echo $filee[1];
+echo $filee[0];
 
 # $arrayNew=eval($filee[1]);
 echo "</br>";
-eval($filee[1]);
+eval($filee[0]);
 
 var_dump(($users));
+
+# traigo el array del archivo
+# lo paso a array con el eval
+# modifico el array con los nuevos valoreS: push, or delete, o modificar
+# guardo el array sustituyendo al que ya etsaba en el archivo php de la base de datos.
+
 
 
 
