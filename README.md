@@ -45,7 +45,7 @@ To install `php-sessions-extra`, use the following steps:
 To start using the package, instantiate the `SessionManager` class and call the desired methods to interact with session data.
 
 ```php
-use Paola3stefania\PhpSessionsExtra\SessionManager;
+use PhpSessionsExtra\SessionManager;
 
 $session = new SessionManager();
 $session->start();
